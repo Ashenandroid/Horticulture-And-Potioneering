@@ -1,4 +1,4 @@
-package ash.horticulturepotioneering.item.custom;
+package ash.horticulturepotioneering.item.custom.brews;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
@@ -22,8 +22,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class NightVisionBrewItem extends Item {
-    public NightVisionBrewItem(Settings settings) {
+public class SpeedBrewItem extends Item {
+    public SpeedBrewItem(Settings settings) {
         super(settings);
     }
 
@@ -37,7 +37,7 @@ public class NightVisionBrewItem extends Item {
         }
 
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 1800));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1200));
         }
 
         if (stack.isEmpty()) {

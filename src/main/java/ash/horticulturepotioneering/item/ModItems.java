@@ -1,7 +1,7 @@
 package ash.horticulturepotioneering.item;
 
 import ash.horticulturepotioneering.HorticultureAndPotioneering;
-import ash.horticulturepotioneering.item.custom.*;
+import ash.horticulturepotioneering.item.custom.brews.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -13,20 +13,21 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
+    // Crops & Plants
+    public static final Item CHILLBERRIES = registerItem("chillberries", new Item(new FabricItemSettings()
+            .food(ModFoodComponents.CHILLBERRIES)));
+    public static final Item SPINACH = registerItem("spinach", new Item(new FabricItemSettings()
+            .food(ModFoodComponents.SPINACH)));
+    public static final Item LEMON = registerItem("lemon", new Item(new FabricItemSettings()
+            .food(ModFoodComponents.LEMON)));
+    public static final Item LIME = registerItem("lime", new Item(new FabricItemSettings()
+            .food(ModFoodComponents.LIME)));
+    public static final Item ORANGE = registerItem("orange", new Item(new FabricItemSettings()
+            .food(ModFoodComponents.ORANGE)));
+    public static final Item WILLOW_BARK = registerItem("willow_bark", new Item(new FabricItemSettings()
+            .food(ModFoodComponents.WILLOW_BARK)));
 
     // Brews
-    /* Potion effects to add
-    Haste
-    Strength
-    Speed
-    Night Vision
-    Regeneration
-    Fire Resistance
-    Water Breathing
-    Invisibility
-
-    Weaker instant health?
-    */
     public static final Item HASTE_BREW = registerItem("haste_brew",
             new HasteBrewItem(new FabricItemSettings().maxCount(1)));
     public static final Item STRENGTH_BREW = registerItem("strength_brew",

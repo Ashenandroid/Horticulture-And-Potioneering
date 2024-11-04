@@ -1,4 +1,4 @@
-package ash.horticulturepotioneering.item.custom;
+package ash.horticulturepotioneering.item.custom.brews;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
@@ -22,8 +22,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class FireResistanceBrewItem extends Item {
-    public FireResistanceBrewItem(Settings settings) {
+public class RegenerationBrewItem extends Item {
+    public RegenerationBrewItem(Settings settings) {
         super(settings);
     }
 
@@ -37,7 +37,7 @@ public class FireResistanceBrewItem extends Item {
         }
 
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1800));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 600));
         }
 
         if (stack.isEmpty()) {

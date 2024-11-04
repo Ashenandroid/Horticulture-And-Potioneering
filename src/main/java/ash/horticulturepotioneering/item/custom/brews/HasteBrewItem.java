@@ -1,4 +1,4 @@
-package ash.horticulturepotioneering.item.custom;
+package ash.horticulturepotioneering.item.custom.brews;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
@@ -6,10 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsage;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
@@ -22,8 +19,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SpeedBrewItem extends Item {
-    public SpeedBrewItem(Settings settings) {
+public class HasteBrewItem extends Item {
+    public HasteBrewItem (Settings settings) {
         super(settings);
     }
 
@@ -37,15 +34,15 @@ public class SpeedBrewItem extends Item {
         }
 
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1200));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 1800));
         }
 
         if (stack.isEmpty()) {
-            return new ItemStack(Items.BOWL);
+            return new ItemStack(Items.GLASS_BOTTLE);
         }
 
         if (user instanceof PlayerEntity playerEntity && !((PlayerEntity)user).getAbilities().creativeMode) {
-            ItemStack itemStack = new ItemStack(Items.BOWL);
+            ItemStack itemStack = new ItemStack(Items.GLASS_BOTTLE);
             stack.decrement(1);
             if (!playerEntity.getInventory().insertStack(itemStack)) {
                 playerEntity.dropItem(itemStack, false);

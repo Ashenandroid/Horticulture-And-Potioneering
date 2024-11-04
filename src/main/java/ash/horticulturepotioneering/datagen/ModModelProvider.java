@@ -19,6 +19,14 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        // Crops
+        itemModelGenerator.register(ModItems.CHILLBERRIES, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SPINACH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LEMON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LIME, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ORANGE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WILLOW_BARK, Models.GENERATED);
+
         // Brews
         itemModelGenerator.register(ModItems.FIRE_RESISTANCE_BREW, Models.GENERATED);
         itemModelGenerator.register(ModItems.HASTE_BREW, Models.GENERATED);

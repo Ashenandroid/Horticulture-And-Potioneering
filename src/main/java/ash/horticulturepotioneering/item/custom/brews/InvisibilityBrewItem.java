@@ -1,4 +1,4 @@
-package ash.horticulturepotioneering.item.custom;
+package ash.horticulturepotioneering.item.custom.brews;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
@@ -22,8 +22,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class WaterBreathingBrewItem extends Item {
-    public WaterBreathingBrewItem(Settings settings) {
+public class InvisibilityBrewItem extends Item {
+    public InvisibilityBrewItem(Settings settings) {
         super(settings);
     }
 
@@ -37,15 +37,15 @@ public class WaterBreathingBrewItem extends Item {
         }
 
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 1800));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 1200));
         }
 
         if (stack.isEmpty()) {
-            return new ItemStack(Items.GLASS_BOTTLE);
+            return new ItemStack(Items.BOWL);
         }
 
         if (user instanceof PlayerEntity playerEntity && !((PlayerEntity)user).getAbilities().creativeMode) {
-            ItemStack itemStack = new ItemStack(Items.GLASS_BOTTLE);
+            ItemStack itemStack = new ItemStack(Items.BOWL);
             stack.decrement(1);
             if (!playerEntity.getInventory().insertStack(itemStack)) {
                 playerEntity.dropItem(itemStack, false);

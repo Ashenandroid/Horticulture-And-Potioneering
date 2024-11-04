@@ -17,6 +17,15 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.hnp"))
                     .icon(() -> new ItemStack(Items.EXPERIENCE_BOTTLE)).entries((displayContext, entries) -> {
 
+                        // Crops
+                        entries.add(ModItems.CHILLBERRIES);
+                        entries.add(ModItems.SPINACH);
+                        entries.add(ModItems.LEMON);
+                        entries.add(ModItems.LIME);
+                        entries.add(ModItems.ORANGE);
+                        entries.add(ModItems.WILLOW_BARK);
+
+                        // Brews
                         entries.add(ModItems.HASTE_BREW);
                         entries.add(ModItems.STRENGTH_BREW);
                         entries.add(ModItems.SPEED_BREW);
