@@ -6,7 +6,10 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsage;
+import net.minecraft.item.Items;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
@@ -19,8 +22,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class HasteBrewItem extends Item {
-    public HasteBrewItem (Settings settings) {
+public class WaterBreathingBrewItem extends Item {
+    public WaterBreathingBrewItem(Settings settings) {
         super(settings);
     }
 
@@ -34,7 +37,7 @@ public class HasteBrewItem extends Item {
         }
 
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 1800));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 1800));
         }
 
         if (stack.isEmpty()) {

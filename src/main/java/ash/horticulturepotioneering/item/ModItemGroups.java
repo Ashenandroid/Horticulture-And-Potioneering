@@ -13,11 +13,18 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
 
     public static final ItemGroup HnP_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(HorticultureAndPotioneering.MOD_ID, "hncbrews"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ruby"))
+            new Identifier(HorticultureAndPotioneering.MOD_ID, "hnp"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.hnp"))
                     .icon(() -> new ItemStack(Items.EXPERIENCE_BOTTLE)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.HASTE_BREW);
+                        entries.add(ModItems.STRENGTH_BREW);
+                        entries.add(ModItems.SPEED_BREW);
+                        entries.add(ModItems.FIRE_RESISTANCE_BREW);
+                        entries.add(ModItems.INVISIBILITY_BREW);
+                        entries.add(ModItems.NIGHT_VISION_BREW);
+                        entries.add(ModItems.REGENERATION_BREW);
+                        entries.add(ModItems.WATER_BREATHING_BREW);
 
                     }).build());
 

@@ -1,3 +1,12 @@
 {
-  "item.horticultureandpotioneering.haste_brew": "Haste Brew"
+  "item.horticulture-and-potioneering.haste_brew": "Haste Brew",
+  "item.horticulture-and-potioneering.strength_brew": "Strength Brew",
+  "item.horticulture-and-potioneering.fire_resistance_brew": "Fire Resistance Brew",
+  "item.horticulture-and-potioneering.invisibility_brew": "Invisibility Brew",
+  "item.horticulture-and-potioneering.night_vision_brew": "Night Vision Brew",
+  "item.horticulture-and-potioneering.regeneration_brew": "Regeneration Brew",
+  "item.horticulture-and-potioneering.speed_brew": "Speed Brew",
+  "item.horticulture-and-potioneering.water_breathing_brew": "Water Breathing Brew",
+
+  "itemgroup.hnp": "Horticultre and Potioneering"
 }
